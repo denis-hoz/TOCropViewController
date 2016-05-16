@@ -92,15 +92,14 @@
                                                                  resourceBundle,
                                                                  nil)
                      forState:UIControlStateNormal];
-    [_doneTextButton setTitleColor:[UIColor colorWithRed:1.0f green:0.8f blue:0.0f alpha:1.0f] forState:UIControlStateNormal];
+	[_doneTextButton setTitleColor:[UIColor colorWithRed:(0x7A/255.f) green:(0xBA/255.f) blue:(0x3A/255.f) alpha:1.0f] forState:UIControlStateNormal];
     [_doneTextButton.titleLabel setFont:[UIFont systemFontOfSize:17.0f]];
     [_doneTextButton addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:_doneTextButton];
-    
+	
     _doneIconButton = [UIButton buttonWithType:UIButtonTypeSystem];
     [_doneIconButton setImage:[TOCropToolbar doneImage] forState:UIControlStateNormal];
-    [_doneIconButton setTintColor:[UIColor colorWithRed:1.0f green:0.8f blue:0.0f alpha:1.0f]];
-    [_doneIconButton addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchUpInside];
+	[_doneTextButton setTitleColor:[UIColor colorWithRed:(0x7A/255.f) green:(0xBA/255.f) blue:(0x3A/255.f) alpha:1.0f] forState:UIControlStateNormal];    [_doneIconButton addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:_doneIconButton];
     
     _cancelTextButton = [UIButton buttonWithType:UIButtonTypeSystem];
