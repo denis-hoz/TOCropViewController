@@ -109,6 +109,16 @@ typedef NS_ENUM(NSInteger, TOCropViewControllerToolbarPosition) {
 @property (nonatomic, assign) BOOL showActivitySheetOnDone;
 
 /**
+ Preferred status bar style, the default value is `UIStatusBarStyleDefault`.
+ */
+@property (nonatomic, assign) UIStatusBarStyle defaultStatusBarStyle;
+
+/**
+ If true, hides status bar.
+ */
+@property (nonatomic, assign) BOOL hideStatusBar;
+
+/**
  The default aspect ratio for the crop view, the default value is 
  `TOCropViewControllerAspectRatioOriginal`.
  */

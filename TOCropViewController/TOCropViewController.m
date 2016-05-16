@@ -73,6 +73,8 @@
         _defaultAspectRatio = TOCropViewControllerAspectRatioOriginal;
         _toolbarPosition = TOCropViewControllerToolbarPositionBottom;
         _rotateClockwiseButtonHidden = YES;
+		
+		_defaultStatusBarStyle = UIStatusBarStyleDefault;
     }
     
     return self;
@@ -147,12 +149,12 @@
 #pragma mark - Status Bar -
 - (UIStatusBarStyle)preferredStatusBarStyle
 {
-    return UIStatusBarStyleDefault;
+    return self.defaultStatusBarStyle;
 }
 
 - (BOOL)prefersStatusBarHidden
 {
-    return !(self.inTransition) && !(self.view.superview == nil);
+    return (self.hideStatusBar) && !(self.inTransition) && !(self.view.superview == nil);
 }
 
 - (CGRect)frameForToolBarWithVerticalLayout:(BOOL)verticalLayout
