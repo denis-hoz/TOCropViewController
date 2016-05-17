@@ -92,14 +92,13 @@
                                                                  resourceBundle,
                                                                  nil)
                      forState:UIControlStateNormal];
-	[_doneTextButton setTitleColor:[UIColor colorWithRed:(0x7A/255.f) green:(0xBA/255.f) blue:(0x3A/255.f) alpha:1.0f] forState:UIControlStateNormal];
     [_doneTextButton.titleLabel setFont:[UIFont systemFontOfSize:17.0f]];
     [_doneTextButton addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:_doneTextButton];
 	
     _doneIconButton = [UIButton buttonWithType:UIButtonTypeSystem];
     [_doneIconButton setImage:[TOCropToolbar doneImage] forState:UIControlStateNormal];
-	[_doneTextButton setTitleColor:[UIColor colorWithRed:(0x7A/255.f) green:(0xBA/255.f) blue:(0x3A/255.f) alpha:1.0f] forState:UIControlStateNormal];    [_doneIconButton addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchUpInside];
+    [_doneIconButton addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:_doneIconButton];
     
     _cancelTextButton = [UIButton buttonWithType:UIButtonTypeSystem];
@@ -109,10 +108,12 @@
                                                                    nil)
                        forState:UIControlStateNormal];
     [_cancelTextButton.titleLabel setFont:[UIFont systemFontOfSize:17.0f]];
+    [_cancelIconButton setTitleColor:[UIColor colorWithWhite:0.69f alpha:1.0f] forState:UIControlStateNormal];
     [_cancelTextButton addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:_cancelTextButton];
     
     _cancelIconButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    [_cancelIconButton setTitleColor:[UIColor colorWithWhite:0.69f alpha:1.0f] forState:UIControlStateNormal];
     [_cancelIconButton setImage:[TOCropToolbar cancelImage] forState:UIControlStateNormal];
     [_cancelIconButton addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:_cancelIconButton];
